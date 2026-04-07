@@ -56,6 +56,19 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Gunung Panderman adalah salah satu destinasi wisata alam populer di Kota Batu, '
+        'Jawa Timur. Jalur pendakiannya cukup ramah untuk pemula dan menawarkan '
+        'pemandangan gemerlap kota Batu yang memukau dari area camp pada malam hari. \n\n'
+        'Nama: Fajar Kurnia Putra\n'
+        'NIM: 244107060074\n'
+        'Selamat mengerjakan 😀.',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Fajar Kurnia Putra dan 244107060074',
       home: Scaffold(
@@ -65,7 +78,8 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             titleSection,
-            buttonSection, 
+            buttonSection,
+            textSection, 
           ],
         ),
       ),
