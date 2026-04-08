@@ -20,8 +20,8 @@ class HomePage extends StatelessWidget {
       body: GridView.builder(
         padding: const EdgeInsets.all(8),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, 
-          childAspectRatio: 0.7, 
+          crossAxisCount: 2,
+          childAspectRatio: 0.7,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
         ),
@@ -33,15 +33,18 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/item', arguments: item);
             },
             child: Card(
-              clipBehavior: Clip.antiAlias, 
+              clipBehavior: Clip.antiAlias,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Image.network(
-                      item.imageUrl,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
+                    child: Hero(
+                      tag: item.name, 
+                      child: Image.network(
+                        item.imageUrl,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
                     ),
                   ),
                   Padding(

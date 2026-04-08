@@ -15,11 +15,14 @@ class ItemPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(
-            itemArgs.imageUrl,
-            width: double.infinity,
-            height: 250,
-            fit: BoxFit.cover,
+          Hero(
+            tag: itemArgs.name, 
+            child: Image.network(
+              itemArgs.imageUrl,
+              width: double.infinity,
+              height: 250,
+              fit: BoxFit.cover,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
